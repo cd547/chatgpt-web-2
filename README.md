@@ -7,16 +7,16 @@
 </br>
 
 ## 说明
-> **此项目 Fork 自 [Chanzhaoyu/chatgpt-web](https://github.com/Chanzhaoyu/chatgpt-web), 除了定时合并该分支, 新增了部分特色功能, 注册&登录, 前端页面设置apikey 等**
+> **此项目 引自 自 [Chanzhaoyu/chatgpt-web](https://github.com/Chanzhaoyu/chatgpt-web) &[Kerwin1202/chatgpt-web](https://github.com/Kerwin1202/chatgpt-web),  除了定时合并该分支, 新增了部分特色功能, 注册&登录, 前端页面设置apikey 等**
 </br>
 
 ## 截图
 > 声明：此项目只发布于 Github，基于 MIT 协议，免费且作为开源学习使用。并且不会有任何形式的卖号、付费服务、讨论群、讨论组等行为。谨防受骗。
 
-![cover3](./docs/login.jpg)
-![cover](./docs/c1.png)
-![cover2](./docs/c2.png)
-![cover3](./docs/basesettings.jpg)
+![cover3](./docs/scrshot.jpeg)
+![cover](./docs/c2.jpeg)
+![cover2](./docs/c3.jpeg)
+
 
 - [ChatGPT Web](#chatgpt-web)
 	- [介绍](#介绍)
@@ -378,4 +378,4 @@ A: 一种可能原因是经过 Nginx 反向代理，开启了 buffer，则 Nginx
 如果你觉得这个项目对你有帮助，请给我点个Star。
 
 ## License
-MIT © [Kerwin1202](./license)
+MIT © [luckywangxi](./license)
