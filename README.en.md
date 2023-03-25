@@ -7,16 +7,15 @@
 </br>
 
 ## Introduction
-> **This project is forked from [Chanzhaoyu/chatgpt-web](https://github.com/Chanzhaoyu/chatgpt-web). In addition to regularly merging this branch, some unique features have been added such as registration and login, setting API key on the front-end page.**
+> **This project is forked from [Chanzhaoyu/chatgpt-web](https://github.com/Chanzhaoyu/chatgpt-web) &[Kerwin1202/chatgpt-web](https://github.com/Kerwin1202/chatgpt-web). In addition to regularly merging this branch, some unique features have been added such as registration and login, setting API key on the front-end page.**
 </br>
 
 ## Screenshots
 > Disclaimer: This project is only released on GitHub, under the MIT License, free and for open-source learning purposes. There will be no account selling, paid services, discussion groups, or forums. Beware of fraud.
 
-![cover3](./docs/login.jpg)
-![cover](./docs/c1.png)
-![cover2](./docs/c2.png)
-![cover3](./docs/basesettings.jpg)
+![cover3](./docs/scrshot.jpeg)
+![cover](./docs/c2.jpeg)
+![cover2](./docs/c3.jpeg)
 
 - [ChatGPT Web](#chatgpt-web)
 	- [Introduction](#introduction)
@@ -373,4 +372,4 @@ Thanks to all the contributors!
 If you find this project helpful, please give me a star.
 
 ## License
-MIT © [Kerwin1202](./license)
+MIT © [luckywangxi](./license)
