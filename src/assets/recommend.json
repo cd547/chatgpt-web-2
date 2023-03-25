@@ -1,0 +1,14 @@
+[
+  {
+    "key": "awesome-chatgpt-prompts-en",
+    "desc": "ChatGPT English Prompts",
+    "downloadUrl": "https://ghproxy.com/https://raw.githubusercontent.com/luckywangxi/awesome-chatgpt-prompts-en/main/awesome-chatgpt-prompts-en.json",
+    "url": "https://github.com/f/awesome-chatgpt-prompts"
+  },
+  {
+    "key": "awesome-chatgpt-prompts-zh",
+    "desc": "ChatGPT 中文调教指南",
+    "downloadUrl": "https://ghproxy.com/https://raw.githubusercontent.com/PlexPt/awesome-chatgpt-prompts-zh/main/prompts-zh.json",
+    "url": "https://github.com/PlexPt/awesome-chatgpt-prompts-zh"
+  }
+]
