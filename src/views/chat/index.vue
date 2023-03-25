@@ -550,7 +550,7 @@ onUnmounted(() => {
           <div class="text-center mt-12">
             <h2 class="text-lg font-normal">{{ $t('home.Me') }}</h2>
             <p class="mt-4 text-center w-full bg-gray-50 dark:bg-white/5 p-3 rounded-md">
-              {{ $t('home.Open') }}<a href="https://github.com/luckywangxi/chatgpt-web-1" target="_blank" class="text-blue-600 dark:text-blue-500" rel="noopener noreferrer"> GitHub</a> {{ $t('home.Base') }}<a href="https://github.com/Chanzhaoyu/chatgpt-web" target="_blank" class="text-blue-600 dark:text-blue-500" rel="noopener noreferrer"> GitHub </a>{{ $t('home.Come') }}<br>{{ $t('home.Relation') }}
+              {{ $t('home.Open') }}<a href="https://github.com/luckywangxi/chatgpt-web-1" target="_blank" class="text-blue-600 dark:text-blue-500" rel="noopener noreferrer">GitHub</a>{{ $t('home.Base') }}<a href="https://github.com/Chanzhaoyu/chatgpt-web" target="_blank" class="text-blue-600 dark:text-blue-500" rel="noopener noreferrer">GitHub</a>{{ $t('home.Come') }}<br>{{ $t('home.Relation') }}
               <br>
               <a href="https://donate.wangxi.online/" class="text-blue-600 dark:text-blue-500 text-center" target="_blank" rel="noopener noreferrer">{{ $t('home.Donate') }}</a>
             </p>
