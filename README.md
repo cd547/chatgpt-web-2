@@ -7,7 +7,7 @@
 </br>
 
 ## 说明
-> **此项目 引自 自 [Chanzhaoyu/chatgpt-web](https://github.com/Chanzhaoyu/chatgpt-web) &[Kerwin1202/chatgpt-web](https://github.com/Kerwin1202/chatgpt-web),  除了定时合并该分支, 新增了部分特色功能, 注册&登录, 前端页面设置apikey 等**
+> **此项目 引自 自 [Chanzhaoyu/chatgpt-web](https://github.com/Chanzhaoyu/chatgpt-web) &[Kerwin1202/chatgpt-web](https://github.com/Kerwin1202/chatgpt-web)
 </br>
 
 ## 截图
