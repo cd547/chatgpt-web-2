@@ -287,18 +287,12 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: xxxx
       MONGO_INITDB_DATABASE: chatgpt
 
-  mongo-gui:
-    container_name: "mongo-gui"
-    image: ugleiton/mongo-gui
-    restart: always
+  mongo-express:
+    image: mongo-express
     ports:
-      - "4321:4321"
+      - "8081:8081"
     environment:
-      - MONGO_URL=mongodb://chatgpt:xxxx@database:27017
-    links:
-      - database
-    depends_on:
-      - database
+      ME_CONFIG_MONGODB_URL: mongodb://chatgpt:jaJA2643589579@database:27017
 
 volumes:
   mongodb: {}
