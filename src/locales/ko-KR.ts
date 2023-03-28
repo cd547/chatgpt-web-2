@@ -84,7 +84,7 @@ export default {
     smtpUserName: '계정',
     smtpPassword: '비밀번호/비밀번호',
     siteTitle: '웹사이트 제목',
-    siteDomain: '도메인 이름 없음 /',
+    siteDomain: '도메인 이름 없음 “/”',
     registerEnabled: '신규 사용자',
     registerMails: '이메일 접미사',
     apiBaseUrl: '인터페이스 주소',

@@ -85,7 +85,7 @@ export default {
     smtpUserName: 'UserName',
     smtpPassword: 'Password',
     siteTitle: 'Title',
-    siteDomain: 'Domain',
+    siteDomain: 'Domain Without\'/\'',
     registerEnabled: 'Register Enabled',
     registerMails: 'Register Mails',
     apiBaseUrl: 'Api Base Url',

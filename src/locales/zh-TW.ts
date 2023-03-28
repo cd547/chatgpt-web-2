@@ -85,7 +85,7 @@ export default {
     smtpUserName: '賬號',
     smtpPassword: '密碼/專用密碼',
     siteTitle: '網站標題',
-    siteDomain: '域名 不含/',
+    siteDomain: '域名 不含“/”',
     registerEnabled: '新用戶',
     registerMails: '郵箱後綴',
     apiBaseUrl: '接口地址',
