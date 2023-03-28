@@ -3,8 +3,13 @@ import { computed, onMounted, ref } from 'vue'
 import { NButton, NInput, NSpin, useMessage } from 'naive-ui'
 import { ConfigState } from './model'
 import { fetchChatConfig, fetchUpdateBaseSetting } from '@/api'
-import { useAuthStore } from '@/store'
+import { useAuthStore, useSettingStore } from '@/store'
+import type { SettingsState } from '@/store/modules/settings/helper'
 import { t } from '@/locales'
+
+const settingStore = useSettingStore()
+
+const systemMessage = ref(settingStore.systemMessage ?? '')
 
 const ms = useMessage()
 
@@ -47,6 +52,16 @@ async function updateBaseSetting(baseConfig?: Partial<ConfigState>) {
 onMounted(() => {
   fetchConfig()
 })
+
+function updateSettings(options: Partial<SettingsState>) {
+  settingStore.updateSetting(options)
+}
+
+function handleReset() {
+  settingStore.resetSetting()
+  ms.success(t('common.success'))
+  window.location.reload()
+}
 </script>
 
 <template>
@@ -67,6 +82,17 @@ onMounted(() => {
           <div class="flex-1">
             <NInput :value="config && config.apiBaseUrl" placeholder="https://api.openai.com" @input="(val) => { if (config) config.apiBaseUrl = val }" />
           </div>
+        </div>
+        <div v-if="isChatGPTAPI" class="flex items-center space-x-4">
+          <span class="flex-shrink-0 w-[100px]">{{ $t('setting.role') }}</span>
+          <div class="flex-1">
+            <NInput v-model:value="systemMessage" placeholder="" />
+          </div>
+          <p v-if="isChatGPTAPI">
+            <NButton size="small" @click="handleReset">
+          {{ $t('common.reset') }}
+        </NButton>
+      </p>
         </div>
         <div v-if="isChatGPTAPI" class="flex items-center space-x-4">
           <span class="flex-shrink-0 w-[100px]">{{ $t('setting.apiModel') }}</span>
@@ -106,7 +132,7 @@ onMounted(() => {
         </div>
         <div class="flex items-center space-x-4">
           <span class="flex-shrink-0 w-[100px]" />
-          <NButton :loading="saving" type="primary" @click="updateBaseSetting(config)">
+          <NButton :loading="saving" type="primary" @click="() => { updateBaseSetting(config); updateSettings({ systemMessage }); }">
             {{ $t('common.save') }}
           </NButton>
         </div>
