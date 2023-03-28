@@ -55,13 +55,6 @@ services:
       SMTP_PASSWORD: ${SMTP_PASSWORD}
     links:
       - database
-			
-  mongo-express:
-    image: mongo-express
-    ports:
-      - "8081:8081"
-    environment:
-      ME_CONFIG_MONGODB_URL: mongodb://chatgpt:jaJA2643589579@database:27017
 
   database:
     image: mongo

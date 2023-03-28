@@ -8,7 +8,7 @@
 
 ## 说明
 > **此项目 引自 自 [Chanzhaoyu/chatgpt-web](https://github.com/Chanzhaoyu/chatgpt-web) &[Kerwin1202/chatgpt-web](https://github.com/Kerwin1202/chatgpt-web)
-</br>
+> </br>
 
 ## 截图
 > 声明：此项目只发布于 Github，基于 MIT 协议，免费且作为开源学习使用。并且不会有任何形式的卖号、付费服务、讨论群、讨论组等行为。谨防受骗。
@@ -50,10 +50,10 @@
 
 支持双模型，提供了两种非官方 `ChatGPT API` 方法
 
-| 方式                                          | 免费？ | 可靠性     | 质量 |
-| --------------------------------------------- | ------ | ---------- | ---- |
-| `ChatGPTAPI(gpt-3.5-turbo-0301)`                           | 否     | 可靠       | 相对较笨 |
-| `ChatGPTUnofficialProxyAPI(网页 accessToken)` | 是     | 相对不可靠 | 聪明 |
+| 方式                                          | 免费？ | 可靠性     | 质量     |
+| --------------------------------------------- | ------ | ---------- | -------- |
+| `ChatGPTAPI(gpt-3.5-turbo-0301)`              | 否     | 可靠       | 相对较笨 |
+| `ChatGPTUnofficialProxyAPI(网页 accessToken)` | 是     | 相对不可靠 | 聪明     |
 
 对比：
 1. `ChatGPTAPI` 使用 `gpt-3.5-turbo-0301` 通过官方`OpenAI`补全`API`模拟`ChatGPT`（最稳健的方法，但它不是免费的，并且没有使用针对聊天进行微调的模型）
@@ -305,21 +305,21 @@ volumes:
 
 #### Railway 环境变量
 
-| 环境变量名称          | 必填                   | 备注                                                                                               |
-| --------------------- | ---------------------- | -------------------------------------------------------------------------------------------------- |
-| `PORT`                | 必填                   | 默认 `3002`
-| `AUTH_SECRET_KEY`          | 可选                   | 访问权限密钥                                        |
-| `MAX_REQUEST_PER_HOUR`          | 可选                   | 每小时最大请求次数，可选，默认无限                                        |
-| `TIMEOUT_MS`          | 可选                   | 超时时间，单位毫秒                                                                             |
-| `OPENAI_API_KEY`      | `OpenAI API` 二选一    | 使用 `OpenAI API` 所需的 `apiKey` [(获取 apiKey)](https://platform.openai.com/overview)            |
-| `OPENAI_ACCESS_TOKEN` | `Web API` 二选一       | 使用 `Web API` 所需的 `accessToken` [(获取 accessToken)](https://chat.openai.com/api/auth/session) |
-| `OPENAI_API_BASE_URL`   | 可选，`OpenAI API` 时可用 |  `API`接口地址  |
-| `OPENAI_API_MODEL`   | 可选，`OpenAI API` 时可用 |  `API`模型  |
-| `API_REVERSE_PROXY`   | 可选，`Web API` 时可用 | `Web API` 反向代理地址 [详情](https://github.com/transitive-bullshit/chatgpt-api#reverse-proxy)    |
-| `SOCKS_PROXY_HOST`   | 可选，和 `SOCKS_PROXY_PORT` 一起时生效 | Socks代理    |
-| `SOCKS_PROXY_PORT`   | 可选，和 `SOCKS_PROXY_HOST` 一起时生效 | Socks代理端口    |
-| `HTTPS_PROXY`   | 可选 | HTTPS 代理，支持 http，https, socks5    |
-| `ALL_PROXY`   | 可选 | 所有代理 代理，支持 http，https, socks5    |
+| 环境变量名称           | 必填                                   | 备注                                                         |
+| ---------------------- | -------------------------------------- | ------------------------------------------------------------ |
+| `PORT`                 | 必填                                   | 默认 `3002`                                                  |
+| `AUTH_SECRET_KEY`      | 可选                                   | 访问权限密钥                                                 |
+| `MAX_REQUEST_PER_HOUR` | 可选                                   | 每小时最大请求次数，可选，默认无限                           |
+| `TIMEOUT_MS`           | 可选                                   | 超时时间，单位毫秒                                           |
+| `OPENAI_API_KEY`       | `OpenAI API` 二选一                    | 使用 `OpenAI API` 所需的 `apiKey` [(获取 apiKey)](https://platform.openai.com/overview) |
+| `OPENAI_ACCESS_TOKEN`  | `Web API` 二选一                       | 使用 `Web API` 所需的 `accessToken` [(获取 accessToken)](https://chat.openai.com/api/auth/session) |
+| `OPENAI_API_BASE_URL`  | 可选，`OpenAI API` 时可用              | `API`接口地址                                                |
+| `OPENAI_API_MODEL`     | 可选，`OpenAI API` 时可用              | `API`模型                                                    |
+| `API_REVERSE_PROXY`    | 可选，`Web API` 时可用                 | `Web API` 反向代理地址 [详情](https://github.com/transitive-bullshit/chatgpt-api#reverse-proxy) |
+| `SOCKS_PROXY_HOST`     | 可选，和 `SOCKS_PROXY_PORT` 一起时生效 | Socks代理                                                    |
+| `SOCKS_PROXY_PORT`     | 可选，和 `SOCKS_PROXY_HOST` 一起时生效 | Socks代理端口                                                |
+| `HTTPS_PROXY`          | 可选                                   | HTTPS 代理，支持 http，https, socks5                         |
+| `ALL_PROXY`            | 可选                                   | 所有代理 代理，支持 http，https, socks5                      |
 
 > 注意: `Railway` 修改环境变量会重新 `Deploy`
 
