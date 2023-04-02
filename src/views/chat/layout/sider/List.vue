@@ -1,6 +1,6 @@
 <script setup lang='ts'>
-import { computed, nextTick, onMounted } from 'vue'
-import { NInput, NPopconfirm, NScrollbar } from 'naive-ui'
+import { computed, onMounted, ref } from 'vue'
+import { NInput, NPopconfirm, NScrollbar, NSpin } from 'naive-ui'
 import { SvgIcon } from '@/components/common'
 import { useAppStore, useChatStore } from '@/store'
 import { useBasicLayout } from '@/hooks/useBasicLayout'
@@ -14,6 +14,8 @@ const appStore = useAppStore()
 const chatStore = useChatStore()
 const authStore = useAuthStoreWithout()
 
+const loadingRoom = ref(false)
+
 const dataSources = computed(() => chatStore.history)
 
 onMounted(async () => {
@@ -24,10 +26,9 @@ onMounted(async () => {
 async function handleSyncChatRoom() {
   // if (chatStore.history.length == 1 && chatStore.history[0].title == 'New Chat'
   //   && chatStore.chat[0].data.length <= 0)
+  loadingRoom.value = true
   chatStore.syncHistory(() => {
-    const scrollRef = document.querySelector('#scrollRef')
-    if (scrollRef)
-      nextTick(() => scrollRef.scrollTop = scrollRef.scrollHeight)
+    loadingRoom.value = false
   })
 }
 
@@ -38,11 +39,6 @@ async function handleSelect({ uuid }: Chat.History) {
   // 这里不需要 不然每次切换都rename
   // if (chatStore.active)
   //   chatStore.updateHistory(chatStore.active, { isEdit: false })
-  chatStore.syncChat({ uuid } as Chat.History, () => {
-    const scrollRef = document.querySelector('#scrollRef')
-    if (scrollRef)
-      nextTick(() => scrollRef.scrollTop = scrollRef.scrollHeight)
-  })
   await chatStore.setActive(uuid)
 
   if (isMobile.value)
@@ -76,6 +72,7 @@ function isActive(uuid: number) {
 
 <template>
   <NScrollbar class="px-4">
+    <NSpin :show="loadingRoom">
     <div class="flex flex-col gap-2 text-sm">
       <template v-if="!dataSources.length">
         <div class="flex flex-col items-center mt-4 text-center text-neutral-300">
@@ -125,5 +122,6 @@ function isActive(uuid: number) {
         </div>
       </template>
     </div>
+  </NSpin>
   </NScrollbar>
 </template>

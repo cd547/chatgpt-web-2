@@ -1,4 +1,7 @@
 import type { ObjectId } from 'mongodb'
+import * as dotenv from 'dotenv'
+
+dotenv.config()
 
 export enum Status {
   Normal = 0,
