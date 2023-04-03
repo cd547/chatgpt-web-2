@@ -1,25 +1,7 @@
 import path from 'path'
-import type { PluginOption } from 'vite'
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { VitePWA } from 'vite-plugin-pwa'
-
-function setupPlugins(env: ImportMetaEnv): PluginOption[] {
-  return [
-    vue(),
-    env.VITE_GLOB_APP_PWA === 'true' && VitePWA({
-      injectRegister: 'auto',
-      manifest: {
-        name: 'The Wang',
-        short_name: 'The Wang',
-        icons: [
-          { src: 'android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
-          { src: 'android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
-        ],
-      },
-    }),
-  ]
-}
 
 export default defineConfig((env) => {
   const viteEnv = loadEnv(env.mode, process.cwd()) as unknown as ImportMetaEnv
@@ -30,7 +12,23 @@ export default defineConfig((env) => {
         '@': path.resolve(process.cwd(), 'src'),
       },
     },
-    plugins: setupPlugins(viteEnv),
+    plugins: [
+      vue(),
+      VitePWA({
+        injectRegister: 'auto',
+        manifest: {
+          name: 'The Wang',
+          short_name: 'The Wang',
+          description: 'Wonderful AI of Natural Generation',
+          theme_color: '#000000',
+          background_color: '#000000',
+          icons: [
+            { src: 'pwa-192x192.png', sizes: '192x192', type: 'image/png' },
+            { src: 'pwa-512x512.png', sizes: '512x512', type: 'image/png' },
+          ],
+        },
+      }),
+    ],
     server: {
       host: '0.0.0.0',
       port: 1002,
