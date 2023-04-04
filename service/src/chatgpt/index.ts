@@ -165,9 +165,6 @@ async function fetchBalance() {
     // 计算剩余额度
     const balance = totalAmount - totalUsage;
 
-    // 输出余额信息
-    console.log(`balance: ${balance.toFixed(3)}`);
-
     return Promise.resolve(balance.toFixed(3))
   } 
   catch {

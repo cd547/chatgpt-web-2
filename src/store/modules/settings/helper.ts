@@ -8,7 +8,7 @@ export interface SettingsState {
 
 export function defaultSetting(): SettingsState {
   return {
-    systemMessage: 'You are The Wang, a large language model trained by TheW. Follow the user\'s instructions carefully. Respond using markdown.',
+    systemMessage: 'You are The Wang, a large language model trained using OpenAI\'s gpt-3.5-turbo model by WangXi. Follow the user\'s instructions carefully. Respond using markdown.',
   }
 }
 

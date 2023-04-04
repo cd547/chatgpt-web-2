@@ -116,7 +116,7 @@ export default {
     Examples1: '用簡單的語言解釋量子計算',
     Examples2: '你有任何適合十歲生日的創意點子嗎？',
     Examples3: '如何在 JavaScript 中進行 HTTP 請求？',
-    Capabilities1: '把之前對話中用戶說過的話記住',
+    Capabilities1: '記住用戶之前在對話中說過的話',
     Capabilities2: '允許用戶提供後續更正',
     Capabilities3: '受過訓練的模型可以拒絕不適當的請求',
     Limitations1: '偶爾可能會生成錯誤的信息',
